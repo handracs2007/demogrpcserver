@@ -1,9 +1,5 @@
 syntax = "proto3";
 
-option java_package="org.handra.demo.grpc";
-option java_multiple_files=true;
-option java_outer_classname="DemoGrpc";
-
 option go_package=".;rpc";
 
 message HelloRequest {
