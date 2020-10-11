@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package="org.handra.demo.grpc";
+option java_multiple_files=true;
+option java_outer_classname="DemoGrpc";
+
+option go_package=".;rpc";
+
+message HelloRequest {
+  string name = 1;
+  int32 age = 2;
+}
+
+message HelloResponse {
+  string response = 1;
+}
+
+service DemoService {
+  rpc SayHello(HelloRequest) returns (HelloResponse);
+}
